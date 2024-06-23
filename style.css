@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: whitesmoke;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'nav nav nav'
+    'header header header'
+    'short short short'
+    'produk produk produk';
+}
+
+header .navHeader{
+    grid-area: nav;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+    padding: 5px;
+}
+
+header .navHeader input{
+    width: 90%;
+    height: 40px;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+    /* background-image: url(./image/search.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 15px; */
+    background-position: start;
+    margin-left: 10px;
+}
+
+
+header .navHeader ul{
+    width: 100%;
+    grid-column-start: -1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    list-style: none;
+    /* background-color: red; */
+    padding: 5px;
+}
+
+header .navHeader ul li a img{
+    height: 25px;
+}
+
+header .billboardImage{
+    grid-area: header;
+    background-image: url("https://images.tokopedia.net/img/cache/1208/NsjrJu/2024/6/21/bc22e917-ae0f-419a-95a9-685970eac777.jpg.webp?ect=4g");
+    height: 200px;
+    padding: 0 50px 0 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(5,2fr);
+}
+
+header .billboardImage .dot{
+    color: white;
+    grid-column-start: 3;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+
+header .menuTransaksi{
+    grid-area: short;
+    /* background-color: red; */
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minMax(80px,1fr));
+}
+
+header .menuTransaksi .item{
+    font-size: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 5px;
+    gap: 3px;
+    width: 70px;
+    /* background-color: grey; */
+}
+
+header .menuTransaksi a{
+    text-decoration: none;
+    color: black;
+}
+
+header .menuTransaksi .item a img{
+    background-color: white;
+    border-radius: 30%;
+    height: 30px;
+    padding: 8px;
+}
+
+
+/* product */
+
+.produk{
+    grid-area: produk;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minMax(200px,1fr));
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 10px;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 100px ;
+}
+
+
+.produk .item{
+    border-radius: 7px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 5px; */
+    background: white;
+    width: 200px;
+    padding-bottom: 5px;
+}
+
+.produk .item p,h4{
+    padding: 5px;
+}
+
+.produk .item img{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 100%;
+    height: 100px;
+
+}
+
+/* Footer Navigation */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    
+    width: 100%;
+    background-color: white;
+    height: 80px;
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+footer img{
+    height: 40px;
+    cursor: pointer;
+}
+
+
+@media (min-width : 1000px){
+    header .billboardImage{
+        height: 300px;
+    }
+
+    header .menuTransaksi{
+        width: 90%;
+    }
+
+    .produk{
+        width: 60%;
+        /* background-color: red; */
+    }
+    
+    .produk .item{
+        padding-bottom: 0px;
+        width: 100%;
+    }
+    
+    .produk .item img{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        width: 100%;
+        height: 150px;
+    
+    }
+    
+}
+@media (max-width : 1000px){
+
+    header .billboardImage{
+        height: 250px;
+    }
+
+    .produk{
+        width: 98%;
+        /* background-color: red; */
+    }
+    
+    .produk .item{
+        padding-bottom: 0px;
+        width: 98%;
+    }
+    
+    .produk .item img{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        width: 100%;
+        height: 150px;
+    
+    }
+    
+}
+@media (max-width : 430px){
+    header .billboardImage{
+        height: 100px;
+    }
+    .produk{
+        grid-template-columns: 1fr;
+        /* background-color: red; */
+        width: 90%;
+    }
+    
+    .produk .item{
+        padding-bottom: 0px;
+        width: 98%;
+    }
+    
+    .produk .item img{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        width: 100%;
+        height: 150px;
+    
+    }
+    
+}
