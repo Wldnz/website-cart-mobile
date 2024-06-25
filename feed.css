@@ -1,0 +1,51 @@
+
+*{
+    margin: 0;
+    padding :0
+}
+
+.container{
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.container .video {
+    width:100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap :20px;
+    padding: 20px;
+}
+
+.container .video iframe{
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+
+/* navigation */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    
+    width: 100%;
+    background-color: white;
+    height: 80px;
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+footer img{
+    height: 40px;
+    cursor: pointer;
+}
