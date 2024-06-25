@@ -147,6 +147,13 @@ header .menuTransaksi .item a img{
     padding-bottom: 5px;
 }
 
+.produk .item .kota::before{
+    content: "🌆";
+}
+.produk .item .harga::before{
+    content: "Rp";
+}
+
 .produk .item p,h4{
     padding: 5px;
 }
