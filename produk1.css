@@ -291,10 +291,19 @@ footer img{
     cursor: pointer;
 }
 
+@media (max-width:600px){
+    .container .deskripsi .deskripsiBarang{
+        width: 80%;
+    }
+}
+
 @media (max-width:400px) {
     .container .deskripsi .profil{
         grid-template-columns: 1fr
 
+    }
+    .container .deskripsi .deskripsiBarang{
+        width: 90%;
     }
 }
 /* @media (max-width:100px) {
