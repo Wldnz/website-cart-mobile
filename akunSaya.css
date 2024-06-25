@@ -95,3 +95,10 @@ footer img{
        grid-template-columns: repeat(3,1fr);
     }
 }
+
+@media (max-width:1000px){
+    .container .history .item a p{
+        width: 90px;
+    }
+    
+}

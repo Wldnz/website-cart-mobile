@@ -145,6 +145,7 @@ header .menuTransaksi .item a img{
     background: white;
     width: 200px;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 .produk .item .kota::before{
